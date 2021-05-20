@@ -19,15 +19,12 @@
     U+FEFF, U+FFFD;
 }
 
-/*#app {
-  font-family: 'Overpass Mono', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+::selection {
+  background: #2263b6 !important;
 }
-*/
+::-moz-selection {
+  background: #2263b6 !important;
+}
 
 .reveal-viewport {
   background: #000;
@@ -49,11 +46,13 @@
 .reveal h6 {
   color: #8C979A;
 }
+.reveal h5, .reveal li {font-size: 2rem;}
+.reveal h6 {font-size: 1.6rem;}
 
 .reveal blockquote, .reveal figcaption {
   font-size: 1.7rem;
 }
-.reveal blockquote {
+.reveal figure blockquote {
   text-align: left;
   background-color: #000;
   border-left: 2px solid orange;

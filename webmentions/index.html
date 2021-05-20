@@ -1,115 +1,214 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>WebMentions for Engineering Sharing Session</title>
-    <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <title>WebMentions for Engineering Sharing Session</title>
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
 
-    <link rel="stylesheet" href="/dist/reset.css">
-    <link rel="stylesheet" href="/dist/reveal.css">
-    <link rel="stylesheet" href="/dist/theme/black.css">
+  <link rel="stylesheet" href="/dist/reset.css">
+  <link rel="stylesheet" href="/dist/reveal.css">
+  <link rel="stylesheet" href="/dist/theme/black.css">
 
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="/plugin/highlight/monokai.css">
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="/plugin/highlight/monokai.css">
 
-    <!-- Custom themes -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-    <section>
-      <h1>WebMention</h1>
-      <h6>The open, next generation of Pingback.</h6>
-    </section>
+  <!-- Custom themes -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
 
-    <section>
-      <h2>
-        What is <a href="https://indieweb.org/Webmention" target="_blank">WebMention</a>?
-      </h2>
-      <h6>tldr; Federated interaction across sites!</h6>
-    </section>
+  <section>
+    <h1>WebMentions</h1>
+    <h5>The open, next generation of Pingback.</h5>
+  </section>
 
-    <section>
-      <figure>
-        <blockquote cite="https://indieweb.org/Webmention">
-          <p>When you link to a website, you can send it a Webmention to notify it. If it supports Webmentions, then that website may display your post as a comment, like, or other response, and presto, you’re having a conversation from one site to another!</p>
-        </blockquote>
-        <figcaption>— <cite><a href="https://indieweb.org/Webmention" target="_blank">indieweb.org/webmention</a></cite></figcaption>
-      </figure>
-    </section>
+  <section>
+    <h2>
+      What is a <a href="https://indieweb.org/Webmention" target="_blank" rel="noreferrer noopener nofollow">WebMention</a>?
+    </h2>
+    <h5>tldr; Federated interactions across sites!</h5>
+  </section>
 
-    <section>
-      <h2>POSSE!</h2>
-      <h6><span style="color:#fff;">P</span>ublish (on your) <span style="color:#fff;">O</span>wn <span style="color:#fff;">S</span>ite, <span style="color:#fff;">S</span>yndicate <span style="color:#fff;">E</span>lsewhere</h6>
-    </section>
+  <section>
+    <figure>
+      <blockquote cite="https://indieweb.org/Webmention">
+        <p>When you link to a website, you can send it a Webmention to notify it. If it supports Webmentions, then that website may display your post as a comment, like, or other response, and presto, you’re having a conversation from one site to another!</p>
+        <figcaption>— <cite><a href="https://indieweb.org/Webmention" target="_blank" rel="noreferrer noopener nofollow">indieweb.org/webmention</a></cite></figcaption>
+      </blockquote>
+    </figure>
+  </section>
 
-    <section>
-      <h3>Making your site compatible</h3>
+  <section>
+    <h2>POSSE!</h2>
+    <h5><span style="color:#fff;">P</span>ublish (on your) <span style="color:#fff;">O</span>wn <span style="color:#fff;">S</span>ite, <span style="color:#fff;">S</span>yndicate <span style="color:#fff;">E</span>lsewhere</h5>
+  </section>
+
+  <section> <!-- response examples -->
+    <h2>Examples</h2>
+    <ul>
+      <li><a href="https://aaronparecki.com/2021/05/14/17/kmikeym" target="_blank" rel="noreferrer noopener nofollow">Aaron Parecki</li>
+      <li><a href="https://hacdias.com/micro/2021/02/re-is-it-time-to-build-my-cms-errors/" target="_blank" rel="noreferrer noopener nofollow">Henrique Dias</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Implement it yourselves!</h3>
+    <ul>
+      <li><a href="https://indiewebify.me" target="_blank" rel="noreferrer noopener nofollow">IndieWebify</a> your site</li>
+      <li>Setup <a href="https://webmention.io" target="_blank" rel="noreferrer noopener nofollow">Webmention.io</a> receiver</li>
+      <li>Show others' response!</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Setup <a href="https://indieweb.org/IndieAuth" target="_blank" rel="noreferrer noopener nofollow">IndieAuth</a></h3>
+    <br>
+    <h6>Visible</h6>
+    <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
       <ul>
-        <li>IndieWebify your site</li>
-        <li>Setup receiver</li>
-        <li>Show others' response!</li>
+        <li><a href="https://twitter.com/ybbond" rel="me">@ybbond on Twitter</a></li>
+        <li><a href="https://github.com/ybbond" rel="me">Github</a></li>
+        <li><a href="mailto:hi@ybbond.id" rel="me">hi@ybbond.id</a></li>
+        <li><a href="sms:+6281100000001" rel="me">(812) 0000-0001</a></li>
       </ul>
-    </section>
+    </script></code></pre>
 
-    <section>
-      <h3>Using Webmention.io</h3>
-    </section>
+    <h6>Hidden</h6>
+    <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
+      <link rel="me" href="https://twitter.com/ybbond" />
+      <link rel="me" href="https://github.com/ybbond" />
+      <link rel="me" href="mailto:hi@ybbond.id" />
+      <link rel="me" href="sms:+6281100000001" />
+    </script></code></pre>
+    <br>
+    <h5>Read tutorial on <a href="https://indieweb.org/How_to_set_up_web_sign-in_on_your_own_domain" target="_blank" rel="noreferrer noopener nofollow">indieweb.org</a></h5>
+  </section>
 
-    <section>
+  <section>
+    <section data-transition="none">
       <h3>Simple blog post example</h3>
-      <pre><code data-trim data-noescape><script type="text/template">
+      <br>
+      <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
         <article class="h-entry">
           <h1 class="p-name">This will be detected as title</h1>
+          <img class="u-photo" src="/avatar.png" />
           <p>by <a class="p-author h-card" href="https://ybbond.id">YBBond</a></p>
           <p><time class="dt-published" datetime="1997-06-12 15:15:00">12<sup>th</sup> June 1997</time></p>
-          
           <p class="p-summary">Abandon hope all ye who enter here!</p>
-          
           <div class="e-content">
             <p>MIDWAY upon the journey of our life</p>
             <p>I found myself within a forest dark,</p>
             <p>For the straightforward pathway had been lost.</p>
-
+            <br>
             <p>Ah me! how hard a thing it is to say</p>
             <p>What was this forest savage, rough, and stern,</p>
             <p>Which in the very thought renews the fear.</p>
           </div>
         </article>
       </script></code></pre>
-      <h6>Check on <a href="https://indiewebify.me" target="_blank">Indiewebify</a></h6>
+      <br>
+      <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
     </section>
 
-    <section> <!-- response examples -->
-      <h2>Examples</h2>
-      <ul>
-        <li>Aaron Parecki</li>
-        <li>Henrique Diaz</li>
-        <li>Yohanes Bandung</li>
-      </ul>
+    <section data-transition="none">
+      <h3>Simple blog post example</h3>
+      <br>
+      <pre><code data-trim data-line-numbers="1" data-noescape><script type="text/template">
+        <article class="h-entry">
+          <h1 class="p-name">This will be detected as title</h1>
+          <img class="u-photo" src="/avatar.png" />
+          <p>by <a class="p-author h-card" href="https://ybbond.id">YBBond</a></p>
+          <p><time class="dt-published" datetime="1997-06-12 15:15:00">12<sup>th</sup> June 1997</time></p>
+          <p class="p-summary">Abandon hope all ye who enter here!</p>
+          <div class="e-content">
+            <p>MIDWAY upon the journey of our life</p>
+            <p>I found myself within a forest dark,</p>
+            <p>For the straightforward pathway had been lost.</p>
+            <br>
+            <p>Ah me! how hard a thing it is to say</p>
+            <p>What was this forest savage, rough, and stern,</p>
+            <p>Which in the very thought renews the fear.</p>
+          </div>
+        </article>
+      </script></code></pre>
+      <br>
+      <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
     </section>
-      </div>
-    </div>
 
-    <script src="/dist/reveal.js"></script>
-    <!-- <script src="/plugin/notes/notes.js"></script> -->
-    <!-- <script src="/plugin/markdown/markdown.js"></script> -->
-    <script src="/plugin/highlight/highlight.js"></script>
-    <script>
-      Reveal.initialize({
-        hash: true,
-        slideNumber: true,
-        transition: 'fade',
-        transitionSpeed: 'fast',
-        plugins: [
-          // RevealMarkdown,
-          RevealHighlight,
-          // RevealNotes,
-        ]
-      });
-    </script>
-  </body>
+    <section data-transition="none">
+      <h3>Simple blog post example</h3>
+      <br>
+      <pre><code data-trim data-line-numbers="3-4" data-noescape><script type="text/template">
+        <article class="h-entry">
+          <h1 class="p-name">This will be detected as title</h1>
+          <img class="u-photo" src="/avatar.png" />
+          <p>by <a class="p-author h-card" href="https://ybbond.id">YBBond</a></p>
+          <p><time class="dt-published" datetime="1997-06-12 15:15:00">12<sup>th</sup> June 1997</time></p>
+          <p class="p-summary">Abandon hope all ye who enter here!</p>
+          <div class="e-content">
+            <p>MIDWAY upon the journey of our life</p>
+            <p>I found myself within a forest dark,</p>
+            <p>For the straightforward pathway had been lost.</p>
+            <br>
+            <p>Ah me! how hard a thing it is to say</p>
+            <p>What was this forest savage, rough, and stern,</p>
+            <p>Which in the very thought renews the fear.</p>
+          </div>
+        </article>
+      </script></code></pre>
+      <br>
+      <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
+    </section>
+
+    <section data-transition="none">
+      <h3>Simple blog post example</h3>
+      <br>
+      <pre><code data-trim data-line-numbers="2,5,6,7" data-noescape><script type="text/template">
+        <article class="h-entry">
+          <h1 class="p-name">This will be detected as title</h1>
+          <img class="u-photo" src="/avatar.png" />
+          <p>by <a class="p-author h-card" href="https://ybbond.id">YBBond</a></p>
+          <p><time class="dt-published" datetime="1997-06-12 15:15:00">12<sup>th</sup> June 1997</time></p>
+          <p class="p-summary">Abandon hope all ye who enter here!</p>
+          <div class="e-content">
+            <p>MIDWAY upon the journey of our life</p>
+            <p>I found myself within a forest dark,</p>
+            <p>For the straightforward pathway had been lost.</p>
+            <br>
+            <p>Ah me! how hard a thing it is to say</p>
+            <p>What was this forest savage, rough, and stern,</p>
+            <p>Which in the very thought renews the fear.</p>
+          </div>
+        </article>
+      </script></code></pre>
+      <br>
+      <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
+    </section>
+  </section>
+
+</div>
+</div>
+
+<script src="/dist/reveal.js"></script>
+<!-- <script src="/plugin/notes/notes.js"></script> -->
+<!-- <script src="/plugin/markdown/markdown.js"></script> -->
+<script src="/plugin/highlight/highlight.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: true,
+  transition: 'fade',
+  transitionSpeed: 'fast',
+  plugins: [
+    // RevealMarkdown,
+    RevealHighlight,
+    // RevealNotes,
+  ]
+});
+</script>
+</body>
 </html>
