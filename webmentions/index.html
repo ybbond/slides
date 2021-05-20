@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>WebMentions for Engineering Sharing Session</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+
+    <link rel="stylesheet" href="/dist/reset.css">
+    <link rel="stylesheet" href="/dist/reveal.css">
+    <link rel="stylesheet" href="/dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="/plugin/highlight/monokai.css">
+
+    <!-- Custom themes -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+    <section>
+      <h1>WebMention</h1>
+      <h6>The open, next generation of Pingback.</h6>
+    </section>
+
+    <section>
+      <h2>
+        What is <a href="https://indieweb.org/Webmention" target="_blank">WebMention</a>?
+      </h2>
+      <h6>tldr; Federated interaction across sites!</h6>
+    </section>
+
+    <section>
+      <figure>
+        <blockquote cite="https://indieweb.org/Webmention">
+          <p>When you link to a website, you can send it a Webmention to notify it. If it supports Webmentions, then that website may display your post as a comment, like, or other response, and presto, you’re having a conversation from one site to another!</p>
+        </blockquote>
+        <figcaption>— <cite><a href="https://indieweb.org/Webmention" target="_blank">indieweb.org/webmention</a></cite></figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>POSSE!</h2>
+      <h6><span style="color:#fff;">P</span>ublish (on your) <span style="color:#fff;">O</span>wn <span style="color:#fff;">S</span>ite, <span style="color:#fff;">S</span>yndicate <span style="color:#fff;">E</span>lsewhere</h6>
+    </section>
+
+    <section>
+      <h3>Making your site compatible</h3>
+      <ul>
+        <li>IndieWebify your site</li>
+        <li>Setup receiver</li>
+        <li>Show others' response!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Using Webmention.io</h3>
+    </section>
+
+    <section>
+      <h3>Simple blog post example</h3>
+      <pre><code data-trim data-noescape><script type="text/template">
+        <article class="h-entry">
+          <h1 class="p-name">This will be detected as title</h1>
+          <p>by <a class="p-author h-card" href="https://ybbond.id">YBBond</a></p>
+          <p><time class="dt-published" datetime="1997-06-12 15:15:00">12<sup>th</sup> June 1997</time></p>
+          
+          <p class="p-summary">Abandon hope all ye who enter here!</p>
+          
+          <div class="e-content">
+            <p>MIDWAY upon the journey of our life</p>
+            <p>I found myself within a forest dark,</p>
+            <p>For the straightforward pathway had been lost.</p>
+
+            <p>Ah me! how hard a thing it is to say</p>
+            <p>What was this forest savage, rough, and stern,</p>
+            <p>Which in the very thought renews the fear.</p>
+          </div>
+        </article>
+      </script></code></pre>
+      <h6>Check on <a href="https://indiewebify.me" target="_blank">Indiewebify</a></h6>
+    </section>
+
+    <section> <!-- response examples -->
+      <h2>Examples</h2>
+      <ul>
+        <li>Aaron Parecki</li>
+        <li>Henrique Diaz</li>
+        <li>Yohanes Bandung</li>
+      </ul>
+    </section>
+      </div>
+    </div>
+
+    <script src="/dist/reveal.js"></script>
+    <!-- <script src="/plugin/notes/notes.js"></script> -->
+    <!-- <script src="/plugin/markdown/markdown.js"></script> -->
+    <script src="/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        transition: 'fade',
+        transitionSpeed: 'fast',
+        plugins: [
+          // RevealMarkdown,
+          RevealHighlight,
+          // RevealNotes,
+        ]
+      });
+    </script>
+  </body>
+</html>
