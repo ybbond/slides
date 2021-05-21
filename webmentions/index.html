@@ -22,29 +22,31 @@
 <div class="slides">
 
   <section>
-    <h1>WebMentions</h1>
-    <h5>The open, next generation of Pingback.</h5>
+    <h1 style="font-size:4rem;">Simple WebMentions Setup</h1>
   </section>
 
   <section>
     <h2>
       What is a <a href="https://indieweb.org/Webmention" target="_blank" rel="noreferrer noopener nofollow">WebMention</a>?
     </h2>
-    <h5>tldr; Federated interactions across sites!</h5>
+    <section>
+      <figure>
+        <blockquote cite="https://indieweb.org/Webmention">
+          <p>When you link to a website, you can send it a Webmention to notify it. If it supports Webmentions, then that website may display your post as a comment, like, or other response, and presto, you’re having a conversation from one site to another!</p>
+          <figcaption>— <cite><a href="https://indieweb.org/Webmention" target="_blank" rel="noreferrer noopener nofollow">indieweb.org/webmention</a></cite></figcaption>
+        </blockquote>
+      </figure>
+    </section>
   </section>
 
   <section>
-    <figure>
-      <blockquote cite="https://indieweb.org/Webmention">
-        <p>When you link to a website, you can send it a Webmention to notify it. If it supports Webmentions, then that website may display your post as a comment, like, or other response, and presto, you’re having a conversation from one site to another!</p>
-        <figcaption>— <cite><a href="https://indieweb.org/Webmention" target="_blank" rel="noreferrer noopener nofollow">indieweb.org/webmention</a></cite></figcaption>
-      </blockquote>
-    </figure>
-  </section>
-
-  <section>
-    <h2>POSSE!</h2>
-    <h5><span style="color:#fff;">P</span>ublish (on your) <span style="color:#fff;">O</span>wn <span style="color:#fff;">S</span>ite, <span style="color:#fff;">S</span>yndicate <span style="color:#fff;">E</span>lsewhere</h5>
+    <h2>
+      What is a <a href="https://indieweb.org/Webmention" target="_blank" rel="noreferrer noopener nofollow">WebMention</a>?
+    </h2>
+    <section>
+      <h5>tldr; The open, alternative to Pingback.</h5>
+      <h5>Federated interactions across sites.</h5>
+    </section>
   </section>
 
   <section> <!-- response examples -->
@@ -53,6 +55,11 @@
       <li><a href="https://aaronparecki.com/2021/05/14/17/kmikeym" target="_blank" rel="noreferrer noopener nofollow">Aaron Parecki</li>
       <li><a href="https://hacdias.com/micro/2021/02/re-is-it-time-to-build-my-cms-errors/" target="_blank" rel="noreferrer noopener nofollow">Henrique Dias</a></li>
     </ul>
+  </section>
+
+  <section>
+    <h2><a href="https://indieweb.org/POSSE" target="_blank" rel="noreferrer noopener nofollow">POSSE</a></h2>
+    <h5><span style="color:#fff;">P</span>ublish (on your) <span style="color:#fff;">O</span>wn <span style="color:#fff;">S</span>ite, <span style="color:#fff;">S</span>yndicate <span style="color:#fff;">E</span>lsewhere</h5>
   </section>
 
   <section>
@@ -198,6 +205,39 @@
               "url": "<url of the likers' profile>"
             },
             "url": "<url of certain social media response url, will redirect to post>",
+            "published": "<ISO String YYYY-MM-DDTHH:mm:ss+00:00>",
+            "wm-received": "<ISO String YYYY-MM-DDTHH:mm:ssZ>",
+            "wm-id": <number ID on bridgy>,
+            "wm-source": "<url of brid-gy.appspot.com redirecting to post>",
+            "wm-target": "<url of user socmed post>/",
+            "content": {
+              "html": "<only exist if the content contains element other than text (@mention, links)>",
+              "text": "<comment / reply content in plain text>"
+            },
+            "in-reply-to": "<url of user socmed post>",
+            "wm-property": "in-reply-to",
+            "wm-private": false
+            "rels": {
+              "canonical": "https://hacdias.com/micro/2021/02/re-is-it-time-to-build-my-cms-errors/"
+            }
+          },
+        ]
+      </script></code></pre>
+      <h6>WM Replies & Twitter, Mastodon and Instagram Comments/Replies</h6>
+    </section>
+
+    <section>
+      <pre><code data-trim data-line-numbers data-noescape class="json"><script type="text/template">
+        [
+          {
+            "type": "entry",
+            "author": {
+              "type": "card",
+              "name": "<display name>",
+              "photo": "<url of photo fetched from social media>",
+              "url": "<url of the likers' profile>"
+            },
+            "url": "<url of certain social media response url, will redirect to post>",
             "published": <null, if like response>,
             "wm-received": "<ISO String YYYY-MM-DDTHH:mm:ssZ>",
             "wm-id": <number ID on bridgy>,
@@ -209,7 +249,7 @@
           }
         ]
       </script></code></pre>
-      <h6>Twitter, Mastodon and Instagram Likes</h6>
+      <h6>WM Likes & Twitter, Mastodon and Instagram Likes</h6>
     </section>
 
     <section>
@@ -235,43 +275,13 @@
           }
         ]
       </script></code></pre>
-      <h6>Twitter and Mastodon Retweets/Boosts</h6>
-    </section>
-
-    <section>
-      <pre><code data-trim data-line-numbers data-noescape class="json"><script type="text/template">
-        [
-          {
-            "type": "entry",
-            "author": {
-              "type": "card",
-              "name": "<display name>",
-              "photo": "<url of photo fetched from social media>",
-              "url": "<url of the likers' profile>"
-            },
-            "url": "<url of certain social media response url, will redirect to post>",
-            "published": "<ISO String YYYY-MM-DDTHH:mm:ss+00:00>",
-            "wm-received": "<ISO String YYYY-MM-DDTHH:mm:ssZ>",
-            "wm-id": <number ID on bridgy>,
-            "wm-source": "<url of brid-gy.appspot.com redirecting to post>",
-            "wm-target": "<url of user socmed post>/",
-            "content": {
-              "html": "<only exist if the content contains element other than text (@mention, links)>",
-              "text": "<comment / reply content in plain text>"
-            },
-            "in-reply-to": "<url of user socmed post>",
-            "wm-property": "in-reply-to",
-            "wm-private": false
-          },
-        ]
-      </script></code></pre>
-      <h6>Twitter, Mastodon and Instagram Comments/Replies</h6>
+      <h6>WM Reposts & Twitter and Mastodon Retweets/Boosts</h6>
     </section>
 
   </section>
 
   <section>
-    <h2>GitHub Action Trick</h2>
+    <h2>GitHub <a href="https://github.com/ybbond/ybbond/actions" target="_blank" rel="noreferrer noopener nofollow">Action</a> Trick</h2>
   </section>
 
   <section>
@@ -280,6 +290,13 @@
 
   <section>
     <h4><a href="https://brid.gy/" target="_blank" rel="noreferrer noopener nofollow">Bridgy</a> for Social Media Responses</h4>
+  </section>
+
+  <section>
+    <section>
+      <h4><a href="https://commentpara.de/" target="_blank" rel="noreferrer noopener nofollow">Comment Parade</a><small>*</small><br>for anonymous reply</h4>
+    </section>
+    <p style="position:absolute;bottom:0;font-size:1.5rem;">*needs <a href="https://commentpara.de/" target="_blank" rel="noreferrer noopener nofollow">micropub endpoint</p>
   </section>
 
   <section>
