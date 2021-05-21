@@ -73,26 +73,27 @@
 
   <section>
     <h3>Setup <a href="https://indieweb.org/IndieAuth" target="_blank" rel="noreferrer noopener nofollow">IndieAuth</a></h3>
-    <br>
-    <h6>Visible</h6>
-    <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
-      <ul>
-        <li><a href="https://twitter.com/ybbond" rel="me">@ybbond on Twitter</a></li>
-        <li><a href="https://github.com/ybbond" rel="me">Github</a></li>
-        <li><a href="mailto:hi@ybbond.id" rel="me">hi@ybbond.id</a></li>
-        <li><a href="sms:+6281100000001" rel="me">(812) 0000-0001</a></li>
-      </ul>
-    </script></code></pre>
+    <section>
+      <h6>Visible</h6>
+      <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
+        <ul>
+          <li><a href="https://twitter.com/ybbond" rel="me">@ybbond on Twitter</a></li>
+          <li><a href="https://github.com/ybbond" rel="me">Github</a></li>
+          <li><a href="mailto:hi@ybbond.id" rel="me">hi@ybbond.id</a></li>
+          <li><a href="sms:+6281100000001" rel="me">(812) 0000-0001</a></li>
+        </ul>
+      </script></code></pre>
 
-    <h6>Hidden</h6>
-    <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
-      <link rel="me" href="https://twitter.com/ybbond" />
-      <link rel="me" href="https://github.com/ybbond" />
-      <link rel="me" href="mailto:hi@ybbond.id" />
-      <link rel="me" href="sms:+6281100000001" />
-    </script></code></pre>
-    <br>
-    <h5>Read tutorial on <a href="https://indieweb.org/How_to_set_up_web_sign-in_on_your_own_domain" target="_blank" rel="noreferrer noopener nofollow">indieweb.org</a></h5>
+      <h6>Hidden</h6>
+      <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
+        <link rel="me" href="https://twitter.com/ybbond" />
+        <link rel="me" href="https://github.com/ybbond" />
+        <link rel="me" href="mailto:hi@ybbond.id" />
+        <link rel="me" href="sms:+6281100000001" />
+      </script></code></pre>
+      <br>
+      <h5>Read tutorial on <a href="https://indieweb.org/How_to_set_up_web_sign-in_on_your_own_domain" target="_blank" rel="noreferrer noopener nofollow">indieweb.org</a></h5>
+    </section>
   </section>
 
   <section>
@@ -187,10 +188,11 @@
   </section>
 
   <section>
-    <h2>Receiver</h2>
+    <h2>Register <a href="https://webmention.io" target="_blank" rel="noreferrer noopener nofollow">Webmention.io</a></h2>
+    <h6>for receiving and sending responses</h6>
   </section>
 
-  <section>
+  <section id="return-example">
     <h3>Return Value Example</h3>
 
     <section>
@@ -285,11 +287,20 @@
   </section>
 
   <section>
+    <h2>Display the responses</h2>
+    <ul>
+      <li><a href="https://github.com/ybbond/ybbond/blob/master/data/webmentions/posts--2020-05-remove-specific-files-from-old-git-commit.json" target="_blank" rel="noreferrer noopener nofollow">store</a> the data</li>
+      <li><a href="https://github.com/ybbond/ybbond/blob/master/layouts/partials/post/webmentions-handler.html" target="_blank" rel="noreferrer noopener nofollow">display</a> the data</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>More Frameworks</h2>
   </section>
 
   <section>
     <h4><a href="https://brid.gy/" target="_blank" rel="noreferrer noopener nofollow">Bridgy</a> for Social Media Responses</h4>
+    <h6><a href="#/return-example">«</a> Back to Return Example</h6>
   </section>
 
   <section>
