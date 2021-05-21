@@ -89,9 +89,8 @@
   </section>
 
   <section>
+    <h3>Simple blog post example</h3>
     <section data-transition="none">
-      <h3>Simple blog post example</h3>
-      <br>
       <pre><code data-trim data-line-numbers data-noescape><script type="text/template">
         <article class="h-entry">
           <h1 class="p-name">This will be detected as title</h1>
@@ -110,13 +109,10 @@
           </div>
         </article>
       </script></code></pre>
-      <br>
       <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
     </section>
 
     <section data-transition="none">
-      <h3>Simple blog post example</h3>
-      <br>
       <pre><code data-trim data-line-numbers="1" data-noescape><script type="text/template">
         <article class="h-entry">
           <h1 class="p-name">This will be detected as title</h1>
@@ -135,13 +131,10 @@
           </div>
         </article>
       </script></code></pre>
-      <br>
       <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
     </section>
 
     <section data-transition="none">
-      <h3>Simple blog post example</h3>
-      <br>
       <pre><code data-trim data-line-numbers="3-4" data-noescape><script type="text/template">
         <article class="h-entry">
           <h1 class="p-name">This will be detected as title</h1>
@@ -160,13 +153,10 @@
           </div>
         </article>
       </script></code></pre>
-      <br>
       <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
     </section>
 
     <section data-transition="none">
-      <h3>Simple blog post example</h3>
-      <br>
       <pre><code data-trim data-line-numbers="2,5,6,7" data-noescape><script type="text/template">
         <article class="h-entry">
           <h1 class="p-name">This will be detected as title</h1>
@@ -185,9 +175,123 @@
           </div>
         </article>
       </script></code></pre>
-      <br>
       <h5>Read more on <a href="http://microformats.org/wiki/h-entry" target="_blank" rel="noreferrer noopener nofollow">microformats.org</a></h5>
     </section>
+  </section>
+
+  <section>
+    <h2>Receiver</h2>
+  </section>
+
+  <section>
+    <h3>Return Value Example</h3>
+
+    <section>
+      <pre><code data-trim data-line-numbers data-noescape class="json"><script type="text/template">
+        [
+          {
+            "type": "entry",
+            "author": {
+              "type": "card",
+              "name": "<display name>",
+              "photo": "<url of photo fetched from social media>",
+              "url": "<url of the likers' profile>"
+            },
+            "url": "<url of certain social media response url, will redirect to post>",
+            "published": <null, if like response>,
+            "wm-received": "<ISO String YYYY-MM-DDTHH:mm:ssZ>",
+            "wm-id": <number ID on bridgy>,
+            "wm-source": "<url of brid-gy.appspot.com redirecting to post>",
+            "wm-target": "<url of user socmed post>",
+            "like-of": "<url of user socmed post>",
+            "wm-property": "like-of",
+            "wm-private": false
+          }
+        ]
+      </script></code></pre>
+      <h6>Twitter, Mastodon and Instagram Likes</h6>
+    </section>
+
+    <section>
+      <pre><code data-trim data-line-numbers data-noescape class="json"><script type="text/template">
+        [
+          {
+            "type": "entry",
+            "author": {
+              "type": "card",
+              "name": "<display name>",
+              "photo": "<url of photo fetched from social media>",
+              "url": "<url of the likers' profile>"
+            },
+            "url": "<url of certain social media response url, will redirect to post>",
+            "published": "<ISO String YYYY-MM-DDTHH:mm:ss+00:00>",
+            "wm-received": "<ISO String YYYY-MM-DDTHH:mm:ssZ>",
+            "wm-id": <number ID on bridgy>,
+            "wm-source": "<url of brid-gy.appspot.com redirecting to post>",
+            "wm-target": "<url of user socmed post>/",
+            "repost-of": "<url of user socmed post>",
+            "wm-property": "repost-of",
+            "wm-private": false
+          }
+        ]
+      </script></code></pre>
+      <h6>Twitter and Mastodon Retweets/Boosts</h6>
+    </section>
+
+    <section>
+      <pre><code data-trim data-line-numbers data-noescape class="json"><script type="text/template">
+        [
+          {
+            "type": "entry",
+            "author": {
+              "type": "card",
+              "name": "<display name>",
+              "photo": "<url of photo fetched from social media>",
+              "url": "<url of the likers' profile>"
+            },
+            "url": "<url of certain social media response url, will redirect to post>",
+            "published": "<ISO String YYYY-MM-DDTHH:mm:ss+00:00>",
+            "wm-received": "<ISO String YYYY-MM-DDTHH:mm:ssZ>",
+            "wm-id": <number ID on bridgy>,
+            "wm-source": "<url of brid-gy.appspot.com redirecting to post>",
+            "wm-target": "<url of user socmed post>/",
+            "content": {
+              "html": "<only exist if the content contains element other than text (@mention, links)>",
+              "text": "<comment / reply content in plain text>"
+            },
+            "in-reply-to": "<url of user socmed post>",
+            "wm-property": "in-reply-to",
+            "wm-private": false
+          },
+        ]
+      </script></code></pre>
+      <h6>Twitter, Mastodon and Instagram Comments/Replies</h6>
+    </section>
+
+  </section>
+
+  <section>
+    <h2>GitHub Action Trick</h2>
+  </section>
+
+  <section>
+    <h2>More Frameworks</h2>
+  </section>
+
+  <section>
+    <h4><a href="https://brid.gy/" target="_blank" rel="noreferrer noopener nofollow">Bridgy</a> for Social Media Responses</h4>
+  </section>
+
+  <section>
+    <section>
+      <h4><a href="https://superfeedr.com/tracker" target="_blank" rel="noreferrer noopener nofollow">Superfeedr</a><small>*</small> with <a href="https://telegraph.p3k.io/superfeedr" target="_blank" rel="noreferrer noopener nofollow">Telegraph</a><br>for Truly Crawling the Web</h4>
+    </section>
+    <p style="position:absolute;bottom:0;font-size:1.5rem;">*paid service</p>
+  </section>
+
+  <section>
+    <h2>Thanks!</h2>
+    <h6>See the slides on <a href="https://slidesybbond.id/webmentions">slides.ybbond.id/webmentions</a>.</h6>
   </section>
 
 </div>
